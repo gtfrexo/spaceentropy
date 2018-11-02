@@ -102,8 +102,9 @@ defmodule Spaceentropy do
     a = Faker.Color.name()
     b = Faker.Company.buzzword_suffix()
     c = Faker.Lorem.word()
-    d = "#{a} #{b} #{c}"
-    password = Bcrypt.hashpwsalt(d)
+    d = Faker.Pokemon.name()
+    e = "#{a} #{b} #{c} #{d} #{b} #{b}"
+    password = Bcrypt.hashpwsalt(e)
     {:ok, password}
   end
 end
